@@ -181,8 +181,9 @@ class TestFilterMetadataRegistry(unittest.TestCase):
             set([colour.lightness_Glasser1958,
                  colour.lightness_Wyszecki1963,
                  colour.lightness_CIE1976,
+                 colour.luminance_CIE1976,
                  colour.lightness_Fairchild2010,
-                 colour.luminance_CIE1976]))
+                 colour.xy_to_xyY]))
 
         self.assertSetEqual(
             set(filter_metadata_registry('Luminance',
@@ -219,7 +220,8 @@ class TestFilterMetadataRegistry(unittest.TestCase):
                  colour.luminance_ASTMD153508,
                  colour.luminance_Newhall1943,
                  colour.luminance_CIE1976,
-                 colour.luminance_Fairchild2010]))
+                 colour.luminance_Fairchild2010,
+                 colour.xy_to_xyY]))
 
         self.assertSetEqual(
             set(filter_metadata_registry('CIE 1976',
