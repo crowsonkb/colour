@@ -1189,7 +1189,7 @@ def temporary_magnitude_quantity_reverse(C, J, n):
    """
 
     C = np.asarray(C)
-    J = np.asarray(J)
+    J = np.maximum(np.asarray(J), 1e-16)
     n = np.asarray(n)
 
     t = (C / (np.sqrt(J / 100) * (1.64 - 0.29 ** n) ** 0.73)) ** (1 / 0.9)
